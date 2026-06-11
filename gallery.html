@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gallery — Farel.A</title>
+<meta name="description" content="A visual log of projects, events, and snapshots from the field.">
+<meta property="og:title" content="Gallery — Farel.A">
+<meta property="og:description" content="A visual log of projects, events, and snapshots from the field.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="site-header-slot"></div>
+<main style="padding-top:5rem">
+<section class="section web">
+    <div class="container-x">
+      <div class="reveal flex items-start justify-between gap-6 flex-wrap">
+        <div>
+          <span class="chip">Gallery</span>
+          <h1 class="section-title" style="margin-top:1rem">Snaps from the <span class="text-spidey">field</span>.</h1>
+          <div class="section-eyebrow-bar"><span></span><span></span><span></span></div>
+        </div>
+        <span class="comic-burst pop sm:inline-grid hidden" style="--r:-10deg;transform:rotate(-10deg);font-size:.85rem">THWIP!</span>
+      </div>
+      <div style="margin-top:2.5rem">
+  <div id="galleryGrid" class="gallery-grid"></div>
+</div>
+    </div>
+  </section>
+</main>
+<div id="site-footer-slot"></div>
+<div id="lightbox" class="lightbox" style="display:none"></div>
+<script>
+  // ============================================================
+  //  EDIT YOUR GALLERY HERE
+  // ------------------------------------------------------------
+  //  1. Create a folder named "media" next to this file
+  //  2. Drop your .jpg / .png / .mp4 files inside it
+  //  3. List them below. Use type:"image" or type:"video".
+  //  4. For videos, "poster" is the thumbnail shown in the grid.
+  // ============================================================
+  window.GALLERY_ITEMS = [
+    { type:"image", src:"media/photo-1.jpeg", caption:"Snapshot 1" },
+    { type:"image", src:"media/photo-2.jpeg", caption:"Snapshot 2" },
+    { type:"image", src:"media/photo-3.jpeg", caption:"Snapshot 3" },
+    { type:"image", src:"media/photo-4.jpeg", caption:"Snapshot 4" },
+    { type:"image", src:"media/photo-5.jpeg", caption:"Snapshot 5" },
+    { type:"image", src:"media/photo-6.jpeg", caption:"Snapshot 6" },
+    { type:"image", src:"media/photo-7.jpeg", caption:"Snapshot 7" },
+    { type:"image", src:"media/photo-8.jpeg", caption:"Snapshot 8" },
+    { type:"video", src:"media/video-1.mp4", caption:"Clip 1" },
+    { type:"video", src:"media/video-2.mp4", caption:"Clip 2" },
+    { type:"video", src:"media/video-3.mp4", caption:"Clip 3" },
+    { type:"video", src:"media/video-4.mp4", caption:"Clip 4" },
+  ];
+</script>
+<script src="script.js"></script>
+</body>
+</html>

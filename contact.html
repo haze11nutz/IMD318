@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact — Farel.A</title>
+<meta name="description" content="Send a signal — reach Farel.A for collaborations, internships, or a friendly hello.">
+<meta property="og:title" content="Contact — Farel.A">
+<meta property="og:description" content="Send a signal — reach Farel.A for collaborations, internships, or a friendly hello.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="site-header-slot"></div>
+<main style="padding-top:5rem">
+<section class="section alt">
+    <div class="container-x">
+      <div class="reveal flex items-start justify-between gap-6 flex-wrap">
+        <div>
+          <span class="chip">Contact</span>
+          <h1 class="section-title" style="margin-top:1rem">Send a <span class="text-spidey">signal</span>.</h1>
+          <div class="section-eyebrow-bar"><span></span><span></span><span></span></div>
+        </div>
+        <span class="comic-burst pop sm:inline-grid hidden" style="--r:-10deg;transform:rotate(-10deg);font-size:.85rem">THWIP!</span>
+      </div>
+      <div style="margin-top:2.5rem">
+  <div style="display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+    <form id="contactForm" class="reveal comic-card p-6 md:p-8" novalidate style="display:grid;gap:1rem">
+      <div>
+        <label class="block text-sm font-semibold mb-1" for="name">Name</label>
+        <input id="name" name="name" class="input" placeholder="Peter Parker">
+        <p id="err-name" class="err"></p>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold mb-1" for="email">Email</label>
+        <input id="email" name="email" type="email" class="input" placeholder="peter@dailybugle.com">
+        <p id="err-email" class="err"></p>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold mb-1" for="message">Message</label>
+        <textarea id="message" name="message" rows="5" class="input" placeholder="What's the mission?"></textarea>
+        <p id="err-message" class="err"></p>
+      </div>
+      <button type="submit" id="contactSubmit" class="btn-comic bg-spidey text-white" style="justify-self:start">Shoot a Web →</button>
+      <p id="sentOk" class="text-primary font-semibold" style="display:none">Thwip! Your message has been sent. 🕸️</p>
+      <p id="sentErr" style="display:none;color:#c00;font-weight:600"></p>
+    </form>
+    <div class="reveal" style="display:grid;gap:1.25rem">
+      <div class="comic-card" style="overflow:hidden">
+        <iframe title="Map of UiTM Puncak Perdana" src="https://www.google.com/maps?q=UiTM+Puncak+Perdana&output=embed" style="width:100%;height:18rem;border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="comic-card p-6" style="display:grid;gap:.5rem">
+        <p class="font-display text-2xl">Reach out</p>
+        <p><span class="font-semibold">Email:</span> farelazeem11@gmail.com</p>
+        <p><span class="font-semibold">Location:</span> Selangor, Malaysia</p>
+        <p><span class="font-semibold">Hours:</span> Patrols 9am — 6pm MYT</p>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </section>
+</main>
+<div id="site-footer-slot"></div>
+<div id="lightbox" class="lightbox" style="display:none"></div>
+<!-- EmailJS SDK + config. Replace the three values below with your EmailJS keys
+     (Dashboard → Account → API keys / Email Services / Email Templates). -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  window.EMAILJS_CONFIG = {
+    publicKey:  "YOUR_PUBLIC_KEY",   // e.g. "abcDEF123..."
+    serviceId:  "YOUR_SERVICE_ID",   // e.g. "service_xxx"
+    templateId: "YOUR_TEMPLATE_ID",  // e.g. "template_xxx"
+    toEmail:    "farelazeem11@gmail.com"
+  };
+  if (window.emailjs && EMAILJS_CONFIG.publicKey !== "YOUR_PUBLIC_KEY") {
+    emailjs.init({ publicKey: EMAILJS_CONFIG.publicKey });
+  }
+</script>
+<script src="script.js"></script>
+</body>
+</html>
